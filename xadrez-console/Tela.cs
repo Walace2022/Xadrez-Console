@@ -31,7 +31,7 @@ namespace xadrez_console
             {
                 Console.WriteLine();
                 Console.WriteLine("Xeque Mate!");
-                Console.WriteLine("Vitoria das "+partida.jogadorAtual);
+                Console.WriteLine("Vitoria das " + partida.jogadorAtual);
             }
         }
         public static void imprimirPecasCapturadas(PartidaDeXadrez partida)
@@ -50,7 +50,7 @@ namespace xadrez_console
         public static void imprimirConjunto(HashSet<Peca> pecas)
         {
             Console.Write("[");
-            foreach(Peca peca in pecas)
+            foreach (Peca peca in pecas)
             {
                 Console.Write(peca + " ");
             }
@@ -71,7 +71,7 @@ namespace xadrez_console
             }
             Console.WriteLine("  a b c d e f g h");
         }
-        public static void imprimirTabuleiro(Tabuleiro tab,bool[,] possicoesPossiveis)
+        public static void imprimirTabuleiro(Tabuleiro tab, bool[,] possicoesPossiveis)
         {
             ConsoleColor fundoOriginal = Console.BackgroundColor;
             ConsoleColor fundoAlterado = ConsoleColor.DarkGray;
@@ -95,9 +95,9 @@ namespace xadrez_console
                 }
                 Console.WriteLine();
             }
-            
+
             Console.WriteLine("  a b c d e f g h");
-           
+
         }
         public static void imprimirPeca(Peca peca)
         {

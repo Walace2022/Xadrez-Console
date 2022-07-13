@@ -15,24 +15,20 @@ namespace xadrez
         {
             this.partida = partida;
         }
-
         public override string ToString()
         {
             return "R";
         }
-
         private bool podeMover(Posicao pos)
         {
             Peca p = tab.peca(pos);
             return p == null || p.cor != cor;
         }
-
         private bool testeTorreParaRoque(Posicao pos)
         {
             Peca p = tab.peca(pos);
             return p != null && p is Torre && p.cor == cor && p.qntMovimentos == 0;
         }
-
         public override bool[,] movimentosPossiveis()
         {
             bool[,] mat = new bool[tab.linhas, tab.colunas];

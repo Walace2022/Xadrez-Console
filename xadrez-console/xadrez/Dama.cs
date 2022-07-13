@@ -13,12 +13,10 @@ namespace xadrez
         {
 
         }
-
         public override string ToString()
         {
             return "D";
         }
-
         private bool podeMover(Posicao pos)
         {
             Peca p = tab.peca(pos);
@@ -50,7 +48,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.definirValores(pos.linha+1,pos.coluna);
+                pos.definirValores(pos.linha + 1, pos.coluna);
             }
             //direita
             pos.definirValores(posicao.linha, posicao.coluna + 1);
@@ -61,7 +59,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.definirValores(pos.linha,pos.coluna+1);
+                pos.definirValores(pos.linha, pos.coluna + 1);
             }
             //esquerda
             pos.definirValores(posicao.linha, posicao.coluna - 1);
@@ -72,7 +70,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.definirValores(pos.linha,pos.coluna - 1);
+                pos.definirValores(pos.linha, pos.coluna - 1);
             }
             //Noroeste
             pos.definirValores(posicao.linha - 1, posicao.coluna - 1);

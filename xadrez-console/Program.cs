@@ -10,7 +10,7 @@ namespace xadrez_console
         {
             try
             {
-               PartidaDeXadrez partida = new PartidaDeXadrez();
+                PartidaDeXadrez partida = new PartidaDeXadrez();
 
                 while (!partida.terminada)
                 {
@@ -36,21 +36,28 @@ namespace xadrez_console
 
                         partida.realizaJogada(origem, destino);
                     }
-                    catch(TabuleiroException e)
+                    catch (TabuleiroException e)
                     {
                         Console.WriteLine(e.Message);
+                        Console.ReadLine();
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("Erro inesperado! Aperte Enter para continuar.");
                         Console.ReadLine();
                     }
 
                 }
                 Console.Clear();
                 Tela.imprimirPartida(partida);
-                
 
-                    
 
-                
-            }catch(TabuleiroException e)
+
+
+
+            }
+            catch (TabuleiroException e)
             {
                 Console.WriteLine(e.Message);
             }

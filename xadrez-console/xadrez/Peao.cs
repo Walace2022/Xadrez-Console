@@ -14,7 +14,6 @@ namespace xadrez
         {
             this.partida = partida;
         }
-
         public override string ToString()
         {
             return "P";
@@ -28,7 +27,6 @@ namespace xadrez
         {
             return tab.peca(pos) == null;
         }
-
         public override bool[,] movimentosPossiveis()
         {
             bool[,] mat = new bool[tab.linhas, tab.colunas];
