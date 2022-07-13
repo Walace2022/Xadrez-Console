@@ -39,7 +39,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.linha = pos.linha - 1;
+                pos.definirValores(pos.linha - 1, pos.coluna);
             }
             //abaixo
             pos.definirValores(posicao.linha + 1, posicao.coluna);
@@ -50,7 +50,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.linha = pos.linha + 1;
+                pos.definirValores(pos.linha+1,pos.coluna);
             }
             //direita
             pos.definirValores(posicao.linha, posicao.coluna + 1);
@@ -61,7 +61,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.coluna = pos.coluna + 1;
+                pos.definirValores(pos.linha,pos.coluna+1);
             }
             //esquerda
             pos.definirValores(posicao.linha, posicao.coluna - 1);
@@ -72,7 +72,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.coluna = pos.coluna - 1;
+                pos.definirValores(pos.linha,pos.coluna - 1);
             }
             //Noroeste
             pos.definirValores(posicao.linha - 1, posicao.coluna - 1);
